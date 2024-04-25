@@ -17,7 +17,7 @@ text_splitter = NLTKTextSplitter(chunk_size=500, chunk_overlap=100)
 chunks = text_splitter.split_documents(data)
 
 # Step 3: Create Chunks Embedding
-embedding_model = GoogleGenerativeAIEmbeddings(google_api_key="AIzaSyDEiOSkcpF9kAcfvya-5yJZWCWuq9UTw6k", model="models/embedding-001")
+embedding_model = GoogleGenerativeAIEmbeddings(google_api_key="API KEY", model="models/embedding-001")
 
 # Step 4: Store the chunks in vector store
 db = Chroma.from_documents(chunks, embedding_model, persist_directory="./chroma_db_")
@@ -41,7 +41,7 @@ chat_template = ChatPromptTemplate.from_messages([
     Answer: """)
 ])
 
-chat_model = ChatGoogleGenerativeAI(google_api_key="AIzaSyDEiOSkcpF9kAcfvya-5yJZWCWuq9UTw6k", model="gemini-1.5-pro-latest")
+chat_model = ChatGoogleGenerativeAI(google_api_key="API KEY", model="gemini-1.5-pro-latest")
 output_parser = StrOutputParser()
 
 rag_chain = (
