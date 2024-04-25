@@ -14,7 +14,7 @@ To run the application locally, follow these steps:
 
 1. Clone this repository to your local machine.
 2. Install the required dependencies using `pip install -r requirements.txt`.
-3. Obtain your Google API key and replace `"YOUR_GOOGLE_API_KEY"` in `rag_system_app.py` with your actual key.
+3. Obtain your Google API key and replace `API KEY` in `rag_system_app.py` with your actual key.
 4. Run the Streamlit application using `streamlit run rag_system_app.py`.
 5. Access the application in your web browser and interact with it by entering questions.
 
